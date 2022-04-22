@@ -10,6 +10,16 @@ inquirer
         },
         {
             type: 'input',
+            name: 'gitHub',
+            message: 'What is your GitHub username?',
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email address?',
+        },
+        {
+            type: 'input',
             name: 'repoName',
             message: 'What is your repo name? (ex. readme-generator)',
         },
@@ -19,10 +29,30 @@ inquirer
             message: 'Give a brief summary of the app:',
         },
         {
+            type: 'input',
+            name: 'installation',
+            message: 'Provide any installation instructions:',
+        },
+        {
             type: 'checkbox',
             name: 'technologies',
             message: 'Which technologies will be used?',
             choices: ['HTML', 'CSS', 'JavaScript', 'Third Party API(s)','Node.js']
+        },
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'Provide any usage instructions or examples:',
+        },
+        {
+            type: 'input',
+            name: 'contributing',
+            message: 'Provide any guidelines for contributing:',
+        },
+        {
+            type: 'input',
+            name: 'tests',
+            message: 'Provide any examples or instructions for tests:',
         },
         {
             type: 'input',
@@ -32,42 +62,72 @@ inquirer
     ])
     .then((response) => {
         const appName = response.appName;
-        const deployedUrl = `https://framenolan.github.io/${response.repoName}`;
-        const techList = response.technologies.toString().replace(',','\n- ');
+        const deployedUrl = `https://${response.gitHub}.github.io/${response.repoName}`;
+        const email = response.email;
+        const gitHub = response.gitHub;
         const briefSummary = response.briefSummary;
+        const installation = response.installation;
+        const techList = response.technologies.toString().replace(',','\n- ');
+        const usage = response.usage;
+        const contributing = response.contributing;
+        const tests = response.tests;
         const currentYear = response.currentYear;
 
         const template =
 
 `# ${appName}
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Deployed Site
 
 [Deployed Site](${deployedUrl})
 
 ## Table of Contents
-* [Introduction](#introduction)
+* [Description](#description)
+* [Installation](#installation)
 * [Technologies](#technologies)
+* [Usage](#usage)
 * [Future Development](#future-development)
-* [Images](#images)
 * [Credits](#credits)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
 * [License](#license)
 
-## Introduction
+## Description
 
 ${briefSummary}
+
+## Installation
+
+${installation}
 
 ## Technologies
 
 - ${techList}
 
-## Future Development
+## Usage
 
-## Images
+${usage}
+
+## Future Development
 
 ## Credits
 
 - Nolan Frame
+
+## Contributing
+
+${contributing}
+
+## Tests
+
+${tests}
+
+## Questions
+
+Please checkout [https://github.com/${gitHub}/](https://github.com/${gitHub}/) or email me at [${email}](mailto:${email}).
 
 ## License
 

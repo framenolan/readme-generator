@@ -1,32 +1,56 @@
 # ${appName}
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Deployed Site
 
 [Deployed Site](${deployedUrl})
 
 ## Table of Contents
-* [Introduction](#introduction)
+* [Description](#description)
+* [Installation](#installation)
 * [Technologies](#technologies)
+* [Usage](#usage)
 * [Future Development](#future-development)
-* [Images](#images)
 * [Credits](#credits)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
 * [License](#license)
 
-## Introduction
+## Description
 
 ${briefSummary}
+
+## Installation
+
+${installation}
 
 ## Technologies
 
 - ${techList}
 
-## Future Development
+## Usage
 
-## Images
+${usage}
+
+## Future Development
 
 ## Credits
 
 - Nolan Frame
+
+## Contributing
+
+${contributing}
+
+## Tests
+
+${tests}
+
+## Questions
+
+Please checkout [https://github.com/${gitHub}/](https://github.com/${gitHub}/) or email me at [${email}](mailto:${email}).
 
 ## License
 
