@@ -24,7 +24,9 @@ This command line app prompts the user with a series of questions and uses those
 
 ## Installation
 
+```md
 ndm install
+```
 
 ## Technologies
 
@@ -33,13 +35,20 @@ ndm install
 
 ## Usage
 
+This app runs in the command terminal. Once the installation is complete, open the terminal and enter the following command to initiate:
 
+```md
+node index.js
+```
 
 ## Future Development
 
+- Adding additional technologies as I learn them
+- Adding additional licenses to choose from a list, include different badges for different licenses
+
 ## Credits
 
-- Nolan Frame
+- Nolan Frame, lead developer, [https://github.com/framenolan/](https://github.com/framenolan/)
 
 ## Contributing
 
